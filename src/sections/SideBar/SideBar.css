@@ -1,0 +1,35 @@
+#sideBarBox{
+    width: 90%;
+    height: 95%;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgb(25, 25, 25);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#sideBarBox .adminLinksContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#sideBarBox .adminLinksContainer .topHeadingBox{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+}
+#sideBarBox .adminLinksContainer .topHeadingBox h3{
+    color: white;
+}
+#sideBarBox .settingBox{
+    width: 100%;
+}
+#sideBarBox .adminLinksContainer .active{
+    background-color: #616d88;
+    border-radius: 5px;
+}
