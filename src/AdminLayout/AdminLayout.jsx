@@ -2,6 +2,7 @@ import './AdminLayout.css'
 import Header from '../sections/Header/Header'
 import { Outlet } from 'react-router-dom'
 import SideBar from '../sections/SideBar/SideBar'
+import ResponsiveSideBar from '../sections/ResponsiveSideBar/ResponsiveSideBar'
 
 function AdminLayout() {
     return (
@@ -14,6 +15,7 @@ function AdminLayout() {
             </div>
             <div id="sideBarContainer">
                 <SideBar />
+                <ResponsiveSideBar />
             </div>
         </div>
     )

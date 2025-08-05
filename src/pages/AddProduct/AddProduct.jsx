@@ -1,23 +1,19 @@
-import { useParams } from 'react-router-dom'
-import './EditProduct.css'
-import Data from '../../Data/Data';
-import { useState } from 'react';
-import category from '../../Data/Category';
-import ViewMainImage from '../../components/ViewImage/ViewMainImage';
-import ViewAllImages from '../../components/ViewImage/ViewAllImages';
+import React, { useState } from 'react'
+import './AddProduct.css'
+import data from '../../Data/Data'
+import ViewMainImage from '../../components/ViewImage/ViewMainImage'
+import ViewAllImages from '../../components/ViewImage/ViewAllImages'
+import category from '../../Data/Category'
 
-function EditProduct() {
-    const params = useParams()
-    const id = params.id;
-    const data = Data[id];
-    const [input, setInput] = useState({ title: data.Title, description: data.Description, price: data.Price, discount: data.Discount, quantity: data.Quantity, gender: data.Gender, category: data.Category })
+function AddProduct() {
+    const [input, setInput] = useState({ title: "", description: "", price: "", discount: "", quantity: "", gender: "", category: "data.Category" })
     let handleChange = (e) => {
         const { name, value } = e.target;
         setInput(prev => ({ ...prev, [name]: value }))
     }
-    return (
-        <div id="editProductContainer">
-            <div id="editProductBox">
+  return (
+    <div id="addProductContainer">
+            <div id="addProductBox">
                 <form action="">
                     <ViewMainImage data={data}/>
                     <ViewAllImages data={data}/>
@@ -31,15 +27,15 @@ function EditProduct() {
                     </div>
                     <div className="inputBox">
                         <label htmlFor="price">Price</label>
-                        <input type="text" className='inputs' name='price' onChange={(e) => { handleChange(e) }} value={input.price} />
+                        <input type="number" className='inputs' name='price' onChange={(e) => { handleChange(e) }} value={input.price} />
                     </div>
                     <div className="inputBox">
                         <label htmlFor="discount">Discount</label>
-                        <input type="text" className='inputs' name='discount' onChange={(e) => { handleChange(e) }} value={input.discount} />
+                        <input type="number" className='inputs' name='discount' onChange={(e) => { handleChange(e) }} value={input.discount} />
                     </div>
                     <div className="inputBox">
                         <label htmlFor="quantity">Quantity</label>
-                        <input type="text" className='inputs' name='quantity' onChange={(e) => { handleChange(e) }} value={input.quantity} />
+                        <input type="number" className='inputs' name='quantity' onChange={(e) => { handleChange(e) }} value={input.quantity} />
                     </div>
                     <div className="inputBox">
                         <label htmlFor="gender">Gender</label>
@@ -61,11 +57,11 @@ function EditProduct() {
                             }
                         </select>
                     </div>
-                    <button className='saveBtn'>Save</button>
+                    <button className='addBtn'>Add</button>
                 </form>
             </div>
         </div>
-    )
+  )
 }
 
-export default EditProduct
+export default AddProduct

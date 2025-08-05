@@ -6,7 +6,7 @@
     padding: 30px;
 }
 #orderManagementContainer #orderTable{
-    width: 60%;
+    width: 90%;
     border-collapse: collapse;
 }
 #orderManagementContainer table thead tr th{
@@ -56,4 +56,87 @@
     height: 40px;
     background-color: white;
     color: black;
+}
+
+@media only screen and (max-width: 576px){
+    #orderManagementContainer #orderTable{
+        width: 80%;
+    }
+    #orderManagementContainer table thead tr th{
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    #orderManagementContainer table tbody tr td{
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+    #orderedProductImage{
+        width: 50px;
+    }
+    .actionBtn{
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+    #cancelBtn{
+        width: 40px;
+        height: 20px;
+    }
+    #readyToShipBtn{
+        width: 40px;
+        height: 25px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #orderManagementContainer #orderTable{
+        width: 80%;
+    }
+    #orderManagementContainer table thead tr th{
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    #orderManagementContainer table tbody tr td{
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    #orderedProductImage{
+        width: 60px;
+    }
+    .actionBtn{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    #cancelBtn{
+        width: 45px;
+        height: 25px;
+    }
+    #readyToShipBtn{
+        width: 45px;
+        height: 30px;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 991px){
+    #orderManagementContainer table thead tr th{
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+    #orderManagementContainer table tbody tr td{
+        padding: 10px;
+        font-size: 0.7rem;
+    }
+    #orderedProductImage{
+        width: 60px;
+    }
+    .actionBtn{
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+    #cancelBtn{
+        width: 60px;
+        height: 25px;
+    }
+    #readyToShipBtn{
+        width: 60px;
+        height: 30px;
+    }
+    
 }

@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 function ProductManagement() {
-  const base = "/src/assets/stock/"
+  const base = "/public/stock/"
   let [data, setData] = useState(Data)
 
   let handelDelete = (id) => {
@@ -15,19 +15,20 @@ function ProductManagement() {
   return (
     <div id="productManagementContainer">
       <div id="productAddBtnBox">
-        <button className='productAddBtn'><GoPlus /> Add</button>
+        <NavLink to={"/add"} className={"navLinks"}><button className='productAddBtn'><GoPlus /> Add</button></NavLink>
       </div>
       <div id="productManagementBox">
         {
           data.map((product, index) => {
             return (
               <ProductCard
+                productId={product.id}
                 mainImage={base + product.MainImage}
-                title={product.Title.slice(0, 120) + "..."}
+                title={product.Title.slice(0, 100) + "..."}
                 price={product.Price} key={index}
                 editAndDeleteBtn={
                   <>
-                    <NavLink to={`/edit/${product.id}`}>
+                    <NavLink to={`/edit/${product.id}`} className="navLinks">
                       <button className='productEditBtn'>Edit</button>
                     </NavLink>
                     <button className='productDeleteBtn' onClick={() => { handelDelete(product.id) }}>Delete</button>

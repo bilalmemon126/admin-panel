@@ -28,3 +28,28 @@
     position: fixed;
     left: 0;
 }
+
+@media only screen and (max-width: 576px){
+    #AdminMainContainer{
+        width: 85%;
+    }
+    #sideBarContainer{
+        width: 15%;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #AdminMainContainer{
+        width: 90%;
+    }
+    #sideBarContainer{
+        width: 10%;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 991px){
+    #AdminMainContainer{
+        width: 70%;
+    }
+    #sideBarContainer{
+        width: 30%;
+    }
+}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 function ViewAllImages({ data }) {
-    const base = "/src/assets/stock/";
-    const [images, setImages] = useState(data.images || [])
+    const base = "/public/stock/"
+    const [images, setImages] = useState(data.Images || [])
 
     const handleChange = (e) => {
         const files = Array.from(e.target.files);
@@ -35,7 +35,7 @@ function ViewAllImages({ data }) {
                         key={index}
                         src={img.startsWith('data:') ? img : base + img}
                         alt={`img-${index}`}
-                        style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+                        style={{ width: '100px', objectFit: 'cover', minWidth: '20px' }}
                     />
                 ))}
             </div>

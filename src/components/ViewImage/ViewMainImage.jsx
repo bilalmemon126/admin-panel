@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function ViewMainImage({data}) {
-    const base = "/src/assets/stock/";
+    const base = "/public/stock/"
     const [mainImage, setMainImage] = useState(data.MainImage)
 
     let handleChange = (e) => {

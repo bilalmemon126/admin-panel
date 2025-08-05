@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import './UserManagement.css'
 
 function UserManagement() {
+    const [blockBtn, setBlockBtn] = useState({btn1: "Block", btn2: "Block", btn3: "Block"})
     return (
         <div id="userManagementContainer">
             <table>
@@ -18,26 +20,23 @@ function UserManagement() {
                         <td>Bilal</td>
                         <td>bilalm3m9n@gmail.com</td>
                         <td id='action'>
-                            <button id='unblockBtn' className='actionBtn'>UnBlock</button>
-                            <button id='blockBtn' className='actionBtn'>Block</button>
+                            <button className={`actionBtn ${blockBtn.btn1}`} onClick={() => setBlockBtn(prev => ({...prev, btn1: blockBtn.btn1 === "Block" ? "UnBlock" : "Block"}))}>{blockBtn.btn1}</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>0</td>
+                        <td>1</td>
                         <td>Bilal</td>
                         <td>bilalm3m9n@gmail.com</td>
                         <td id='action'>
-                            <button id='unblockBtn' className='actionBtn'>UnBlock</button>
-                            <button id='blockBtn' className='actionBtn'>Block</button>
+                            <button className={`actionBtn ${blockBtn.btn2}`} onClick={() => setBlockBtn(prev => ({...prev, btn2: blockBtn.btn2==="Block" ? "UnBlock" : "Block"}))}>{blockBtn.btn2}</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>0</td>
+                        <td>2</td>
                         <td>Bilal</td>
                         <td>bilalm3m9n@gmail.com</td>
                         <td id='action'>
-                            <button id='unblockBtn' className='actionBtn'>UnBlock</button>
-                            <button id='blockBtn' className='actionBtn'>Block</button>
+                            <button className={`actionBtn ${blockBtn.btn3}`} onClick={() => setBlockBtn(prev => ({...prev, btn3: blockBtn.btn3==="Block" ? "UnBlock" : "Block"}))}>{blockBtn.btn3}</button>
                         </td>
                     </tr>
                 </tbody>

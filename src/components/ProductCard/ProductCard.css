@@ -4,9 +4,15 @@
     background-color: black;
     padding: 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     border-radius: 10px;
     gap: 10px;
+}
+#productCardContainer .navLinks{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 #productCardContainer .productMainImage{
     width: 150px;
@@ -41,4 +47,63 @@
 #productCardContainer .editAndDeleteBtn .productDeleteBtn{
     background-color: red;
     color: white;
+}
+
+@media only screen and (max-width: 576px){
+    #productCardContainer{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #productCardContainer .navLinks{
+        flex-direction: column;
+    }
+    #productCardContainer .productMainImage{
+        width: 100%;
+        height: auto;
+    }
+    #productCardContainer .titleAndPrice{
+        width: 100%;
+        gap: 15px;
+    }
+    #productCardContainer .editAndDeleteBtn{
+        width: 100%;
+    }
+    #productCardContainer .editAndDeleteBtn .navLinks{
+        width: 100%;
+    }
+    #productCardContainer .editAndDeleteBtn .navLinks .productEditBtn{
+        width: 100%;
+    }
+    #productCardContainer .editAndDeleteBtn .productDeleteBtn{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #productCardContainer{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #productCardContainer .navLinks{
+        flex-direction: column;
+    }
+    #productCardContainer .productMainImage{
+        width: 100%;
+        height: auto;
+    }
+    #productCardContainer .titleAndPrice{
+        width: 100%;
+        gap: 15px;
+    }
+    #productCardContainer .editAndDeleteBtn{
+        width: 100%;
+    }
+    #productCardContainer .editAndDeleteBtn .navLinks{
+        width: 100%;
+    }
+    #productCardContainer .editAndDeleteBtn .navLinks .productEditBtn{
+        width: 100%;
+    }
+    #productCardContainer .editAndDeleteBtn .productDeleteBtn{
+        width: 100%;
+    }
 }

@@ -35,16 +35,58 @@
     justify-content: center;
     gap: 5px;
 }
-.actionBtn{
+#action .actionBtn{
+    width: 80px;
     padding: 5px 10px;
     border: none;
     border-radius: 2px;
 }
-#blockBtn{
+#action .Block{
     background-color: red;
     color: white;
 }
-#unblockBtn{
+#action .UnBlock{
     background-color: white;
     color: black;
+}
+
+@media only screen and (max-width: 576px){
+    #userManagementContainer table{
+        width: 80%;
+    }
+    #userManagementContainer table thead tr th{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    #userManagementContainer table tbody tr td{
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    #action .actionBtn{
+        width: 50px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #userManagementContainer table thead tr th{
+        padding: 10px 20px;
+    }
+    #userManagementContainer table tbody tr td{
+        padding: 10px 20px;
+    }
+    #action .actionBtn{
+        width: 60px;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 991px){
+    #userManagementContainer table thead tr th{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    #userManagementContainer table tbody tr td{
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    #action .actionBtn{
+        width: 50px;
+    }
 }
