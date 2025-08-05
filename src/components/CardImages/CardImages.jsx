@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './CardImages.css'
 
 function CardImages(props) {
-    const base = "/public/stock/"
+  const base = "/stock/"
 
     const [imageMove, setImageMove] = useState(props.images)
     const [imgChange, setImgChange] = useState(0)

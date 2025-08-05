@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function ViewAllImages({ data }) {
-    const base = "/public/stock/"
+  const base = "/stock/"
     const [images, setImages] = useState(data.Images || [])
 
     const handleChange = (e) => {

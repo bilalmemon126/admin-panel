@@ -2,7 +2,7 @@ import data from '../../Data/Data'
 import './OrderManagement.css'
 
 function OrderManagement() {
-    const base = "/public/stock/"
+  const base = "/stock/"
     return (
         <div id="orderManagementContainer">
             <table id='orderTable'>

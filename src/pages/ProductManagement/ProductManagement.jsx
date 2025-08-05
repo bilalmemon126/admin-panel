@@ -4,10 +4,9 @@ import ProductCard from '../../components/ProductCard/ProductCard'
 import Data from '../../Data/Data'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-// import img from '../../../public/stock/'
 
 function ProductManagement() {
-  const base = "../../../public/stock/"
+  const base = "/stock/"
   let [data, setData] = useState(Data)
 
   let handelDelete = (id) => {
